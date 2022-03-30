@@ -1,5 +1,6 @@
 body{
     background-color: #000 !important;
+    color: #fff;
 }
 
 #sec-navbar{background-color: rgba(0,0,0,0);}
@@ -7,5 +8,7 @@ body{
 
 #sec-carrusel img{
     height: 100vh;
+    max-width: 100%;
     object-fit: cover;
+    object-position: top;
 }
