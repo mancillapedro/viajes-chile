@@ -2,5 +2,10 @@ body{
     background-color: #000 !important;
 }
 
-nav{background-color: rgba(0,0,0,0);}
-nav img{height: 30px;}
+#sec-navbar{background-color: rgba(0,0,0,0);}
+#sec-navbar img{height: 30px;}
+
+#sec-carrusel img{
+    height: 100vh;
+    object-fit: cover;
+}
