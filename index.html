@@ -65,9 +65,10 @@
                 <h2 class="text-center text-uppercase py-3 mb-4">¿Quiénes somos?</h2>
             </header>
             <div class="row row-cols-1 row-cols-lg-3 mt-5">
-                <section class="col mx-auto ">
-                    <i class="fa-solid fa-plane fa-2x text-center bg-info d-block py-1"></i>
-                    <p>
+                <section class="col mx-auto">
+                    <i class="fa-solid fa-plane fa-2x text-center bg-info d-block py-1" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#parrafo1" aria-expanded="false" aria-controls="parrafo1"></i>
+                    <p id="parrafo1" class="collapse multi-collapse parrafos">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, quos cumque? Unde est consectetur
                         maxime dolorem aliquid, laudantium veritatis molestiae nostrum, distinctio, soluta
                         exercitationem!
@@ -79,8 +80,9 @@
                     </p>
                 </section>
                 <section class="col mx-auto">
-                    <i class="fa-solid fa-mountain fa-2x text-center bg-info d-block py-1"></i>
-                    <p>
+                    <i class="fa-solid fa-mountain fa-2x text-center bg-info d-block py-1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#parrafo2" aria-expanded="false" aria-controls="parrafo2"></i>
+                    <p id="parrafo2" class="collapse multi-collapse parrafos">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto reiciendis eius sapiente
                         sunt
                         deserunt facilis mollitia velit nihil illo ut suscipit hic, praesentium, pariatur laudantium
@@ -93,8 +95,9 @@
                     </p>
                 </section>
                 <section class="col mx-auto">
-                    <i class="fa-solid fa-route fa-2x text-center bg-info d-block py-1"></i>
-                    <p>
+                    <i class="fa-solid fa-route fa-2x text-center bg-info d-block py-1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#parrafo3" aria-expanded="false" aria-controls="parrafo3"></i>
+                    <p id="parrafo3" class="collapse multi-collapse parrafos">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nesciunt at repellat quae
                         maiores velit dignissimos praesentium, porro saepe rerum suscipit, commodi molestiae nam tempora
                         officiis harum quas fugiat ad!
@@ -180,17 +183,17 @@
     </section>
 
     <footer class="container-fluid bg-info py-4 mt-5">
-            <div class="row fs-3 mx-auto justify-content-center">
-                <div class="col-6 text-center">
-                    <p class="m-0">Viajes Chile</p>
-                </div>
-                <div class="col-6 text-center">
-                    <i class="fa-brands fa-github-square px-1"></i>
-                    <i class="fa-brands fa-linkedin px-1"></i>
-                    <i class="fa-brands fa-twitter-square px-1"></i>
-                    <i class="fa-brands fa-facebook-square px-1"></i>
-                </div>
+        <div class="row fs-3 mx-auto justify-content-center">
+            <div class="col-6 text-center">
+                <p class="m-0">Viajes Chile</p>
             </div>
+            <div class="col-6 text-center">
+                <i class="fa-brands fa-github-square px-1"></i>
+                <i class="fa-brands fa-linkedin px-1"></i>
+                <i class="fa-brands fa-twitter-square px-1"></i>
+                <i class="fa-brands fa-facebook-square px-1"></i>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
