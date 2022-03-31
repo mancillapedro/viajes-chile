@@ -6,9 +6,8 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 $(function () {
 
-    $(document).scroll(function () {
-        if (window.scrollY >= window.innerHeight) return $('nav').attr('style', 'background-color: rgba(0,0,0,0.9)');
-        $('nav').attr('style', 'background-color: rgba(#000,0)');
+    $(document).scroll(function(){
+        $('nav').attr('style', `background-color: rgba(0,0,0,${window.scrollY/window.innerHeight})`);
     });
 
 });
