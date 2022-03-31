@@ -1,9 +1,10 @@
+/*  */
 body{
     background-color: #000 !important;
     color: #fff;
 }
 
-#sec-navbar{background-color: rgba(0,0,0,0);}
+#sec-navbar{background-color: rgba(#000,0);}
 #sec-navbar img{height: 30px;}
 
 #sec-carrusel img{
@@ -11,4 +12,9 @@ body{
     max-width: 100%;
     object-fit: cover;
     object-position: top;
+}
+
+#sec-destacados img{
+    height: 100px;
+    object-fit: cover;
 }
