@@ -3,22 +3,24 @@ var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
 })
-const collapse = () => {
-    if($(document).width() > 768){ $('.parrafos').addClass('show'); }
-    else{ $('.parrafos').removeClass('show'); }
+
+const icons = $(`i[data-bs-toggle="collapse"]`);
+
+const collapse = (icons) => {
+    if ($(document).width() < 768) {
+        icons.addClass('collapsed');
+        $('.parrafos').removeClass('show');
+    }
 }
 
+const iconsTool = (icons) => icons.attr('data-bs-original-title', `${icons.hasClass('collapsed') ? 'Mostrar' : 'Ocultar' }`)
+
 $(function () {
+    $(document).scroll(function () { $('nav').attr('style', `background-color: rgba(0,0,0,${window.scrollY / window.innerHeight})`); });
 
-    $(document).scroll(function () {
-        $('nav').attr('style', `background-color: rgba(0,0,0,${window.scrollY / window.innerHeight})`);
-    });
+    collapse(icons);
+    $(window).resize(function () { collapse(icons) });
 
-    collapse();
-    $(window).resize(() => collapse());
-
-    $(`i[data-bs-toggle="collapse"]`).hover(function () {
-        if ($($(this).data('bs-target')).hasClass('show')){ return $(this).attr('data-bs-original-title', 'Ocultar') }
-        $(this).attr('data-bs-original-title', 'Mostrar')
-    })
+    iconsTool(icons);
+    $(`i[data-bs-toggle="collapse"]`).hover(function () { iconsTool($(this)) });
 });
