@@ -131,8 +131,10 @@
                     <img src="assets/img/card1.jpg" class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Card title</h5>
-                        <p class="card-text fw-light">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                        <p class="card-text fw-light">
+                            Some quick example text to build on the card title and make up the bulk of the card's
+                            content.
+                        </p>
                     </div>
                 </div>
             </article>
@@ -141,8 +143,10 @@
                     <img src="assets/img/card2.jpg" class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Card title</h5>
-                        <p class="card-text fw-light">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                        <p class="card-text fw-light">
+                            Some quick example text to build on the card title and make up the bulk of the card's
+                            content.
+                        </p>
                     </div>
                 </div>
             </article>
@@ -151,8 +155,10 @@
                     <img src="assets/img/card3.jpg" class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Card title</h5>
-                        <p class="card-text fw-light">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                        <p class="card-text fw-light">
+                            Some quick example text to build on the card title and make up the bulk of the card's
+                            content.
+                        </p>
                     </div>
                 </div>
             </article>
@@ -161,8 +167,10 @@
                     <img src="assets/img/card4.jpg" class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Card title</h5>
-                        <p class="card-text fw-light">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                        <p class="card-text fw-light">
+                            Some quick example text to build on the card title and make up the bulk of the card's
+                            content.
+                        </p>
                     </div>
                 </div>
             </article>
@@ -170,24 +178,33 @@
     </section>
 
     <section id="sec-contacto" class="container px-4 px-lg-5 pt-5">
-        <form action="">
+        <form action="" class="needs-validation" novalidate>
             <fieldset>
                 <legend class="border-bottom mb-4">
                     <h2 class="text-center text-uppercase py-3 h2">Contacto</h2>
                 </legend>
                 <div class="mb-3">
                     <label for="nombre" class="form-label fw-bold">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="">
+                    <input type="text" class="form-control" id="nombre" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Proporcione un nombre válido.
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="asunto" class="form-label fw-bold">Asunto</label>
-                    <input type="text" class="form-control" id="asunto" placeholder="">
+                    <input type="text" class="form-control" id="asunto" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Proporcione un asunto válido.
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="mensaje" class="form-label fw-bold">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" rows="6"></textarea>
+                    <textarea class="form-control" id="mensaje" rows="6" required></textarea>
+                    <div class="invalid-feedback">
+                        Proporcione un mensaje válido.
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-info text-white fw-bold">Submit</button>
+                <button id="btnContacto" type="submit" class="btn btn-info text-white fw-bold">Submit</button>
             </fieldset>
         </form>
     </section>
@@ -198,10 +215,14 @@
                 <p class="m-0 fw-bold">Viajes Chile</p>
             </div>
             <div class="col-6 text-center px-0">
-                <i class="fa-brands fa-github-square px-1"></i>
-                <i class="fa-brands fa-linkedin px-1"></i>
-                <i class="fa-brands fa-twitter-square px-1"></i>
-                <i class="fa-brands fa-facebook-square px-1"></i>
+                <a class="text-white" href="https://github.com/" target="_blank"><i
+                        class="fa-brands fa-github-square px-1"></i></a>
+                <a class="text-white" href="https://www.linkedin.com/" target="_blank"><i
+                        class="fa-brands fa-linkedin px-1"></i></a>
+                <a class="text-white" href="https://twitter.com/" target="_blank"><i
+                        class="fa-brands fa-twitter-square px-1"></i></a>
+                <a class="text-white" href="https://www.facebook.com/" target="_blank"><i
+                        class="fa-brands fa-facebook-square px-1"></i></a>
             </div>
         </div>
     </footer>
