@@ -7,25 +7,22 @@
     var forms = document.querySelectorAll('.needs-validation')
 
     // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-        .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                } else {
-                    alert('¡Mensaje enviado!')
-                }
-                form.classList.add('was-validated')
-            }, false)
-        })
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            } else {
+                alert('¡Mensaje enviado!')
+            }
+            form.classList.add('was-validated')
+        }, false)
+    })
 })()
 
 // habilitar tooltip pero en collapse
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="collapse"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-})
+var tooltipList = tooltipTriggerList.map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 $(function () {
     const icons = $(`i[data-bs-toggle="collapse"]`);
@@ -34,16 +31,9 @@ $(function () {
 
     const collapse = (icons) => {
         const parrafos = $('.parrafos');
-        const colCenter = $('#col-center')
-        if ($(document).width() < 768) {
-            icons.addClass('collapsed');
-            parrafos.removeClass('show ');
-            colCenter.removeClass('d-flex flex-column-reverse');
-            return;
-        }
+        if ($(document).width() < 768) return icons.addClass('collapsed') && parrafos.removeClass('show ')
         icons.removeClass('collapsed');
         parrafos.addClass('show');
-        colCenter.addClass('d-flex flex-column-reverse');
     }
 
     // navbar efecto
